@@ -12,7 +12,12 @@ const eslintConfig = defineConfig([
     'out/**',
     'build/**',
     'next-env.d.ts'
-  ])
+  ]),
+  {
+    rules: {
+      'react-hooks/static-components': 'off'
+    }
+  }
 ]);
 
 export default eslintConfig;

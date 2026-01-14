@@ -5,6 +5,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+button,
+a {
+  cursor: pointer;
+}
+
 @theme inline {
   --font-instrument-serif: 'Instrument Serif', serif;
 }
