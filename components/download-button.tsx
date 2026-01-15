@@ -19,6 +19,8 @@ const DownloadButton = () => {
   const handleDownload = () => {
     if (isWindows && downloadRef.current) {
       downloadRef.current.click();
+    } else {
+      alert('Only available for Windows');
     }
   };
 
@@ -26,7 +28,7 @@ const DownloadButton = () => {
     <>
       <div className="flex flex-col items-center gap-2">
         <Button
-          className="w-[200px] h-[50px] z-10 flex items-center gap-2 bg-white text-black"
+          className="w-[200px] h-[50px] z-10 flex items-center gap-2 bg-white hover:bg-white/80 text-black"
           disabled={!isWindows || !isLoaded}
           onClick={handleDownload}
         >
@@ -43,10 +45,6 @@ const DownloadButton = () => {
           </svg>
           Download (Latest)
         </Button>
-
-        {isLoaded && !isWindows && (
-          <p className="text-xs text-red-400">Only available for Windows</p>
-        )}
       </div>
 
       <a
