@@ -3,6 +3,9 @@ import { HeroVideoDialog } from '@/components/ui/hero-video-dialog';
 import { TextAnimate } from '@/components/ui/text-animate';
 
 const page = () => {
+  const platform = process.platform;
+
+  console.log(platform);
   return (
     <main className="h-[calc(100vh-40px)] flex items-center justify-center">
       <div className="w-full max-w-3xl mx-auto h-full flex flex-col items-center justify-center gap-4">
@@ -22,8 +25,12 @@ const page = () => {
           />
         </div>
         <div>
-          <a href={process.env.NEXT_PUBLIC_DOWNLOAD_URL!} download>
-            <Button className="w-[200px] h-[50px] z-10 flex items-center gap-2" variant={'outline'}>
+          <a href={platform === 'win32' ? process.env.NEXT_PUBLIC_DOWNLOAD_URL! : ''} download>
+            <Button
+              className="w-[200px] h-[50px] z-10 flex items-center gap-2"
+              variant={'outline'}
+              disabled={platform !== 'win32'}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -37,6 +44,9 @@ const page = () => {
               </svg>
               Download (Latest)
             </Button>
+            {platform !== 'win32' && (
+              <p className="w-full text-center text-white pt-2">Only available for windows</p>
+            )}
           </a>
         </div>
       </div>
