@@ -26,8 +26,7 @@ const DownloadButton = () => {
     <>
       <div className="flex flex-col items-center gap-2">
         <Button
-          className="w-[200px] h-[50px] z-10 flex items-center gap-2"
-          variant="outline"
+          className="w-[200px] h-[50px] z-10 flex items-center gap-2 bg-white text-black"
           disabled={!isWindows || !isLoaded}
           onClick={handleDownload}
         >

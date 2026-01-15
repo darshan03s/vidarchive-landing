@@ -47,7 +47,7 @@ export default function RootLayout({
               rel="noopener noreferrer"
               className="absolute top-2 right-2 z-10"
             >
-              <Button variant="outline" size="icon-sm">
+              <Button className="bg-white text-black" size="icon-sm">
                 <Github />
               </Button>
             </a>
