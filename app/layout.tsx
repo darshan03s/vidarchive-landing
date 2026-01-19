@@ -19,6 +19,27 @@ export const metadata: Metadata = {
   title: 'VidArchive',
   description:
     'A free, open-source Windows desktop utility for downloading media using yt-dlp and FFmpeg.',
+  keywords: [
+    'VidArchive',
+    'Windows',
+    'Desktop',
+    'Utility',
+    'Download',
+    'Media',
+    'yt-dlp',
+    'FFmpeg'
+  ],
+  robots: {
+    index: true,
+    follow: true
+  },
+  authors: [{ name: 'Darshan S', url: 'https://darshans.site' }],
+  creator: 'Darshan S',
+  publisher: 'Darshan S',
+  applicationName: 'VidArchive',
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_APP_URL!
+  },
   openGraph: {
     title: 'VidArchive',
     description:
