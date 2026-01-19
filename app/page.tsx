@@ -13,7 +13,7 @@ const page = () => {
             animation="blurInUp"
             by="word"
             once
-            className="text-white text-sm md:text-base text-center max-w-prose mx-auto"
+            className="text-white text-sm md:text-base text-center max-w-prose md:max-w-3xl mx-auto"
           >
             A free, open-source Windows desktop utility for downloading media using yt-dlp and
             FFmpeg.
