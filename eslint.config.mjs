@@ -16,7 +16,8 @@ const eslintConfig = defineConfig([
   {
     rules: {
       'react-hooks/static-components': 'off',
-      'react-hooks/set-state-in-effect': 'off'
+      'react-hooks/set-state-in-effect': 'off',
+      'typescript-eslint/no-unused-vars': 'off'
     }
   }
 ]);
