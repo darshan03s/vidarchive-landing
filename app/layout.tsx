@@ -17,10 +17,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'VidArchive',
-  description: 'A desktop utility application for Windows for downloading media',
+  description:
+    'A free, open-source Windows desktop utility for downloading media using yt-dlp and FFmpeg.',
   openGraph: {
     title: 'VidArchive',
-    description: 'A desktop utility application for Windows for downloading media',
+    description:
+      'A free, open-source Windows desktop utility for downloading media using yt-dlp and FFmpeg.',
     url: process.env.NEXT_PUBLIC_APP_URL!,
     siteName: 'VidArchive',
     locale: 'en_US',
@@ -37,7 +39,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'VidArchive',
-    description: 'A desktop utility application for Windows for downloading media',
+    description:
+      'A free, open-source Windows desktop utility for downloading media using yt-dlp and FFmpeg.',
     images: `${process.env.NEXT_PUBLIC_APP_URL!}/api/og`
   }
 };
