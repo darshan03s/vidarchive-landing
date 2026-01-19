@@ -9,7 +9,12 @@ const page = () => {
       <div className="w-full max-w-lg px-6 md:max-w-3xl md:px-0 mx-auto h-full flex flex-col items-center justify-center gap-8 xl:gap-4">
         <div className="space-y-4">
           <h1 className="font-instrument-serif text-4xl text-center text-white">VidArchive</h1>
-          <TextAnimate animation="blurInUp" by="character" once className="text-white">
+          <TextAnimate
+            animation="blurInUp"
+            by="word"
+            once
+            className="text-white text-sm md:text-base text-center max-w-prose mx-auto"
+          >
             A free, open-source Windows desktop utility for downloading media using yt-dlp and
             FFmpeg.
           </TextAnimate>
