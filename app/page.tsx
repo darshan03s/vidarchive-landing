@@ -7,16 +7,24 @@ const page = () => {
   return (
     <main className="h-[calc(100vh-40px)] flex items-center justify-center">
       <div className="w-full max-w-lg px-6 md:max-w-3xl md:px-0 mx-auto h-full flex flex-col items-center justify-center gap-8 xl:gap-4">
-        <div className="space-y-4">
+        <div className="space-y-4 md:space-y-1">
           <h1 className="font-instrument-serif text-4xl text-center text-white">VidArchive</h1>
           <TextAnimate
             animation="blurInUp"
             by="word"
             once
-            className="text-white text-sm md:text-base text-center max-w-prose md:max-w-3xl mx-auto"
+            className="text-white text-sm md:text-base text-center max-w-prose md:max-w-4xl mx-auto"
           >
-            A free, open-source Windows desktop utility for downloading media using yt-dlp and
-            FFmpeg.
+            A modern Windows desktop app for downloading and managing media with queueing and
+            history tracking.
+          </TextAnimate>
+          <TextAnimate
+            animation="blurInUp"
+            by="word"
+            once
+            className="text-white/80 text-xs text-center max-w-prose md:max-w-3xl mx-auto"
+          >
+            (Built on top of yt-dlp and FFmpeg)
           </TextAnimate>
         </div>
         <div>
