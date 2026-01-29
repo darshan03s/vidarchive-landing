@@ -30,12 +30,12 @@ export async function GET() {
       <p
         style={{
           fontFamily: 'Geist',
-          fontSize: 30,
+          fontSize: 20,
           fontWeight: 'normal',
           color: 'white'
         }}
       >
-        A Windows desktop application for downloading media.
+        A Windows desktop application for downloading and managing media.
       </p>
     </div>,
     {
