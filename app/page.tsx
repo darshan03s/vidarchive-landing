@@ -1,22 +1,20 @@
 import DownloadButton from '@/components/download-button';
 import { HeroVideoDialog } from '@/components/ui/hero-video-dialog';
 import { TextAnimate } from '@/components/ui/text-animate';
-import { Info } from 'lucide-react';
 
 const page = () => {
   return (
     <main className="h-[calc(100vh-40px)] flex items-center justify-center">
       <div className="w-full max-w-lg px-6 md:max-w-3xl md:px-0 mx-auto h-full flex flex-col items-center justify-center gap-8 xl:gap-4">
-        <div className="space-y-4 md:space-y-1">
-          <h1 className="font-instrument-serif text-4xl text-center text-white">VidArchive</h1>
+        <div className="space-y-4 md:space-y-2">
+          <h1 className="font-instrument-serif text-6xl text-center text-white">VidArchive</h1>
           <TextAnimate
             animation="blurInUp"
             by="word"
             once
-            className="text-white text-sm md:text-base text-center max-w-prose md:max-w-4xl mx-auto"
+            className="text-white text-sm md:text-xl text-center max-w-prose md:max-w-4xl mx-auto"
           >
-            A modern Windows desktop app for downloading and managing media with queueing and
-            history tracking.
+            A modern desktop app for downloading and managing media
           </TextAnimate>
           <TextAnimate
             animation="blurInUp"
@@ -29,19 +27,15 @@ const page = () => {
         </div>
         <div>
           <HeroVideoDialog
-            className="z-10"
+            className="z-20 outline-1"
             animationStyle="from-center"
             videoSrc={process.env.NEXT_PUBLIC_DEMO_VIDEO_URL!}
             thumbnailSrc={process.env.NEXT_PUBLIC_DEMO_VIDEO_THUMBNAIL_URL!}
             thumbnailAlt="VidArchive Demo Video"
           />
         </div>
-        <div className="space-y-2 group">
+        <div className="space-y-2">
           <DownloadButton />
-          <p className="text-[10px] bg-amber-300/20 p-2 rounded-md outline-1 outline-amber-300 text-amber-300 text-center flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <Info className="inline-block size-4" /> This app is not code-signed yet, so Windows may
-            show a SmartScreen warning on first launch. The app is completely safe to use.
-          </p>
         </div>
       </div>
     </main>
