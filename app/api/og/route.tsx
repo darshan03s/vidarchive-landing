@@ -35,7 +35,7 @@ export async function GET() {
           color: 'white'
         }}
       >
-        A Windows desktop application for downloading and managing media.
+        A desktop application for downloading and managing media.
       </p>
     </div>,
     {
