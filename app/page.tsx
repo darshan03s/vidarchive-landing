@@ -27,7 +27,7 @@ const page = () => {
         </div>
         <div>
           <HeroVideoDialog
-            className="z-20 outline-1 w-160"
+            className="z-20 outline-1 w-160 rounded-md"
             animationStyle="from-center"
             videoSrc={process.env.NEXT_PUBLIC_DEMO_VIDEO_URL!}
             thumbnailSrc={process.env.NEXT_PUBLIC_DEMO_VIDEO_THUMBNAIL_URL!}
