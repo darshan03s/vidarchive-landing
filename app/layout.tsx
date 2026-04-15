@@ -3,8 +3,6 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Particles } from '@/components/ui/particles';
-import Header from '@/components/header';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -71,21 +69,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{
-          background: 'radial-gradient(125% 125% at 50% 90%, #000000 40%, #0d1a36 100%)'
-        }}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
           {children}
-          <Particles className="absolute inset-0 z-0" quantity={100} ease={80} refresh />
         </ThemeProvider>
         <Analytics />
       </body>
