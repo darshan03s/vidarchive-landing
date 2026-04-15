@@ -1,18 +1,18 @@
-import { Analytics } from '@vercel/analytics/next';
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
+import { Analytics } from '@vercel/analytics/next'
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import './globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin']
-});
+})
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin']
-});
+})
 
 export const metadata: Metadata = {
   title: 'VidArchive',
@@ -60,12 +60,12 @@ export const metadata: Metadata = {
     description: 'A desktop utility application for downloading and managing media.',
     images: `${process.env.NEXT_PUBLIC_APP_URL!}/api/og`
   }
-};
+}
 
 export default function RootLayout({
   children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
@@ -81,5 +81,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  );
+  )
 }

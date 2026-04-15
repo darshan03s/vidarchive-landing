@@ -48,7 +48,7 @@ const Background = ({ children }: { children: React.ReactNode }) => {
       />
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default Background;
+export default Background

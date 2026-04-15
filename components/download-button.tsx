@@ -1,39 +1,39 @@
-'use client';
+'use client'
 
-import { useEffect, useRef, useState } from 'react';
-import { Button } from './ui/button';
-import { Info } from 'lucide-react';
-import { getAllDownloadUrls } from '@/app/download';
+import { useEffect, useRef, useState } from 'react'
+import { Button } from './ui/button'
+import { Info } from 'lucide-react'
+import { getAllDownloadUrls } from '@/app/download'
 
 const DownloadButton = () => {
-  const [os, setOs] = useState<'win' | 'linux' | null>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const downloadRef = useRef<HTMLAnchorElement | null>(null);
-  const [exeUrl, setExeUrl] = useState<string | undefined>('');
-  const [appImageUrl, setAppImageUrl] = useState<string | undefined>('');
-  const [debUrl, setDebUrl] = useState<string | undefined>('');
+  const [os, setOs] = useState<'win' | 'linux' | null>(null)
+  const [isLoaded, setIsLoaded] = useState(false)
+  const downloadRef = useRef<HTMLAnchorElement | null>(null)
+  const [exeUrl, setExeUrl] = useState<string | undefined>('')
+  const [appImageUrl, setAppImageUrl] = useState<string | undefined>('')
+  const [debUrl, setDebUrl] = useState<string | undefined>('')
 
   useEffect(() => {
-    const ua = navigator.userAgent;
-    const isWin = ua.includes('Windows') || ua.includes('Win32') || ua.includes('Win64');
-    const isLinux = ua.includes('Linux') && !ua.includes('Android');
+    const ua = navigator.userAgent
+    const isWin = ua.includes('Windows') || ua.includes('Win32') || ua.includes('Win64')
+    const isLinux = ua.includes('Linux') && !ua.includes('Android')
 
-    if (isWin) setOs('win');
-    else if (isLinux) setOs('linux');
+    if (isWin) setOs('win')
+    else if (isLinux) setOs('linux')
 
     getAllDownloadUrls().then((urls) => {
-      setExeUrl(urls.winExe);
-      setDebUrl(urls.linuxDeb);
-      setAppImageUrl(urls.linuxAppImage);
-      setIsLoaded(true);
-    });
-  }, []);
+      setExeUrl(urls.winExe)
+      setDebUrl(urls.linuxDeb)
+      setAppImageUrl(urls.linuxAppImage)
+      setIsLoaded(true)
+    })
+  }, [])
 
   const handleDownload = () => {
     if (downloadRef.current) {
-      downloadRef.current.click();
+      downloadRef.current.click()
     }
-  };
+  }
 
   return (
     <>
@@ -90,7 +90,7 @@ const DownloadButton = () => {
 
       <a href={os === 'win' ? exeUrl : debUrl} className="hidden" ref={downloadRef} download></a>
     </>
-  );
-};
+  )
+}
 
-export default DownloadButton;
+export default DownloadButton

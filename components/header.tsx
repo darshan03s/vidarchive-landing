@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button';
-import { Github } from 'lucide-react';
+import { Button } from '@/components/ui/button'
+import { Github } from 'lucide-react'
 
 const Header = () => {
   return (
@@ -15,6 +15,6 @@ const Header = () => {
         </Button>
       </a>
     </header>
-  );
-};
-export default Header;
+  )
+}
+export default Header

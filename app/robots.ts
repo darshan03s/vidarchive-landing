@@ -1,6 +1,6 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next'
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL!;
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL!
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -21,5 +21,5 @@ export default function robots(): MetadataRoute.Robots {
     ],
     sitemap: `${APP_URL}/sitemap.xml`,
     host: APP_URL
-  };
+  }
 }

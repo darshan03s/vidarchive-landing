@@ -1,6 +1,6 @@
-import DownloadButton from '@/components/download-button';
-import { HeroVideoDialog } from '@/components/ui/hero-video-dialog';
-import { TextAnimate } from '@/components/ui/text-animate';
+import DownloadButton from '@/components/download-button'
+import { HeroVideoDialog } from '@/components/ui/hero-video-dialog'
+import { TextAnimate } from '@/components/ui/text-animate'
 
 const page = () => {
   return (
@@ -39,6 +39,6 @@ const page = () => {
         </div>
       </div>
     </main>
-  );
-};
-export default page;
+  )
+}
+export default page
