@@ -1,49 +1,17 @@
 const Background = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="min-h-screen w-full relative">
+    <div className="min-h-screen w-full bg-[#020617] relative">
+      {/* Dark Sphere Grid Background */}
       <div
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 z-0"
         style={{
+          background: '#020617',
           backgroundImage: `
-        linear-gradient(to right, #e7e5e4 1px, transparent 1px),
-        linear-gradient(to bottom, #e7e5e4 1px, transparent 1px)
+        linear-gradient(to right, rgba(71,85,105,0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(71,85,105,0.3) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(139,92,246,0.15) 0%, transparent 70%)
       `,
-          backgroundSize: '20px 20px',
-          backgroundPosition: '0 0, 0 0',
-          maskImage: `
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      `,
-          WebkitMaskImage: `
-        repeating-linear-gradient(
-          to right,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        ),
-        repeating-linear-gradient(
-          to bottom,
-          black 0px,
-          black 3px,
-          transparent 3px,
-          transparent 8px
-        )
-      `,
-          maskComposite: 'intersect',
-          WebkitMaskComposite: 'source-in'
+          backgroundSize: '32px 32px, 32px 32px, 100% 100%'
         }}
       />
       {children}
