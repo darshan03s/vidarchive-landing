@@ -5,7 +5,13 @@ export async function GET() {
   return new ImageResponse(
     <div
       style={{
-        background: 'radial-gradient(125% 125% at 50% 90%, #000000 40%, #0d1a36 100%)',
+        background: '#020617',
+        backgroundImage: `
+        linear-gradient(to right, rgba(71,85,105,0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(71,85,105,0.3) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(139,92,246,0.15) 0%, transparent 70%)
+      `,
+        backgroundSize: '32px 32px, 32px 32px, 100% 100%',
         width: '100%',
         height: '100%',
         padding: '50px 200px',
