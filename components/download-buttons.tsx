@@ -14,13 +14,13 @@ const DownloadButtons = () => {
 
   return (
     <>
-      <Button onClick={() => handleDownload('exe')} className="p-6">
+      <Button onClick={() => handleDownload('exe')} className="sm:p-6">
         <IconBrandWindows /> Download .exe (x64)
       </Button>
-      <Button onClick={() => handleDownload('deb')} className="p-6">
+      <Button onClick={() => handleDownload('deb')} className="sm:p-6">
         <IconBrandDebian /> Download .deb (amd64)
       </Button>
-      <Button onClick={() => handleDownload('AppImage')} className="p-6">
+      <Button onClick={() => handleDownload('AppImage')} className="sm:p-6">
         <IconDeviceLaptop /> Download .AppImage (amd64)
       </Button>
     </>
