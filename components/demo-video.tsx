@@ -10,7 +10,7 @@ const DemoVideo = () => {
 
   return (
     <div className="flex justify-center">
-      <Button variant={'outline'} className="text-xs" onClick={() => setOpen(true)}>
+      <Button variant={'outline'} className="text-xs font-montserrat" onClick={() => setOpen(true)}>
         <FilePlay />
         See demo
       </Button>

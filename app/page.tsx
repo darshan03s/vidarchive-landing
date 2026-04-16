@@ -17,7 +17,7 @@ const Page = () => {
           <div className="flex items-center justify-between h-10">
             <span className="flex items-center gap-2">
               <Image src={icon} alt="icon" width={30} height={30} />
-              <span className="font-bold font-mono">VidArchive</span>
+              <span className="font-bold font-instrument-serif text-lg">VidArchive</span>
             </span>
 
             <div className="flex items-center gap-3">
@@ -37,10 +37,13 @@ const Page = () => {
           <div className="flex-1 my-auto flex justify-center items-center">
             <div className="space-y-12 relative bottom-10">
               <div className="space-y-4">
-                <TextAnimate by="character" className="text-5xl font-bold font-mono text-center">
+                <TextAnimate
+                  by="character"
+                  className="text-5xl font-bold font-montserrat text-center"
+                >
                   Download.Track.Manage
                 </TextAnimate>
-                <TextAnimate className=" text-lg font-semibold text-muted-foreground text-center font-mono leading-6">
+                <TextAnimate className=" text-lg font-semibold text-muted-foreground text-center leading-6 font-montserrat">
                   A desktop media downloader with history, progress tracking, and full control.
                 </TextAnimate>
               </div>

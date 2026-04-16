@@ -62,7 +62,7 @@ const itemVariants = {
 const Features = () => {
   return (
     <motion.div
-      className="features flex items-center justify-center flex-wrap gap-4"
+      className="features flex items-center justify-center flex-wrap gap-4 font-montserrat"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
